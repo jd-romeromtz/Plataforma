@@ -11,12 +11,13 @@
 
     <header>
         <div class="logo neon-text">
-            <span class="neon-color-cyan">CODE</span><span class="neon-color-magenta">STREAM</span>
+            <span class="neon-color-cyan">DAY</span><span class="neon-color-magenta">BREAKERS</span>
         </div>
         <nav id="main-nav">
-            <a href="index.html#hero">Inicio</a> 
-            <a href="index.html#courses">Cursos</a>
+            <a href="/index.html">Inicio</a> 
+            <a href="/index.html#courses">Cursos</a>
             <a href="#contact" class="active-link">Contacto</a>
+            <a href="/pages/login.html">Salir</a>
             <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
         </nav>
     </header>
@@ -52,10 +53,28 @@
         </form>
 
     </section>
+    <div id="futuristic-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <button class="modal-close-btn">&times;</button> 
+        
+        <h2 id="modal-title" class="neon-text title-glow neon-color-magenta"></h2>
+        
+        <div class="modal-details">
+            <p><strong class="neon-color-cyan">Duración del Ciclo:</strong> <span id="modal-duration"></span></p>
+            <p><strong class="neon-color-cyan">Requisitos de Acceso:</strong> <span id="modal-requirements"></span></p>
+            
+            <h3><strong class="neon-color-magenta">Contenido Clave (Módulos de Carga):</strong></h3>
+            <ul id="modal-modules">
+                </ul>
+        </div>
+        
+        <button class="neon-button primary-glow">ACCESO AL PROTOCOLO DE INSCRIPCIÓN</button>
+    </div>
+</div>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 CODESTREAM Academy. Todos los derechos reservados.</p>
+            <p>&copy; 2025 DAYBREAKERS Academy. Todos los derechos reservados.</p>
             <p class="developer-info">Sitio web desarrollado por Ing. Jairo David Romero Martínez.</p>
         </div>
     </footer>

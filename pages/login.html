@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al Sistema | CODESTREAM</title>
+    <!-- Mismo archivo CSS para mantener la coherencia visual futurista/neón -->
+    <link rel="stylesheet" href="/css/login.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <div class="login-box">
+            <h1 class="neon-text title-glow neon-color-magenta">ACCESO RESTRINGIDO</h1>
+            <p class="neon-color-cyan" style="margin-bottom: 25px;">Introduce tus credenciales de identidad digital.</p>
+
+            <form id="login-form" autocomplete="off">
+                
+                <div class="login-group">
+                    <label for="username">Usuario / ID de Sistema:</label>
+                    <!-- Reutiliza el estilo de input futurista de styles.css -->
+                    <input type="text" id="username" name="username" required placeholder="Código de Usuario">
+                </div>
+
+                <div class="login-group">
+                    <label for="password">Contraseña / Clave de Acceso:</label>
+                    <input type="password" id="password" name="password" required placeholder="Clave Secreta">
+                </div>
+
+                <button type="submit" class="neon-button primary-glow login-btn">INICIAR SESIÓN</button>
+            </form>
+
+            <!-- Mensaje de estado (éxito o error) -->
+            <p id="login-status" class="login-message hidden">Estado del Sistema</p>
+
+            <a href="index.html" class="redirect-link">← Volver a la Matriz Principal</a>
+        </div>
+    </div>
+    
+    <!-- FOOTER (Aunque sea solo la información del desarrollador) -->
+    <footer>
+        <div class="footer-content">
+            <p class="developer-info">Sitio web desarrollado por Ing. Jairo David Romero Martínez.</p>
+        </div>
+    </footer>
+
+    <script src="/js/login.js"></script>
+</body>
+</html>

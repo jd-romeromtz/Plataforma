@@ -1,0 +1,166 @@
+/* Variables del proyecto para consistencia (Asume que están en styles.css) */
+:root {
+    --bg-dark: #0A0A1F;
+    --neon-cyan: #00FFFF;
+    --neon-magenta: #FF00FF;
+    --text-light: #E0E0E0;
+    --text-muted: #8888AA;
+    --input-bg: #1A1A3A; 
+}
+
+/* --- Estilos de Base y Contenedor de Login --- */
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: rgba(10, 10, 31, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--neon-magenta);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    /* Efecto de caja de sistema activo (Resplandor Magenta) */
+    box-shadow: 
+        0 0 30px rgba(255, 0, 255, 0.5), 
+        inset 0 0 10px rgba(255, 0, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.login-box:hover {
+     box-shadow: 
+        0 0 40px rgba(255, 0, 255, 0.7), 
+        inset 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
+.login-box h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.login-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* --- ESTILO DE LA ETIQUETA (LABEL) - Neón Cian --- */
+.login-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    /* Aplicando el mismo efecto neón a las etiquetas */
+    text-shadow: 0 0 5px var(--neon-cyan); 
+    color: var(--neon-cyan);
+}
+
+/* --- ESTILO DE LOS CAMPOS DE ENTRADA (INPUT) --- */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    /* Base - Reutilizando el look de input futurista */
+    width: 100%;
+    padding: 14px 16px; 
+    background-color: var(--input-bg);
+    color: var(--neon-cyan); /* El texto de entrada es neón */
+    border: 1px solid var(--text-muted); /* Borde inicial discreto */
+    border-radius: 4px; 
+    font-size: 1rem;
+    font-family: 'Space Mono', monospace;
+    transition: all 0.4s ease; 
+    
+    /* Sombra interna para simular una pantalla apagada */
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5); 
+}
+
+/* Placeholder (Texto de ayuda) */
+.login-box input::placeholder {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* --- ESTADO DE ENFOQUE (FOCUS) - Neón Magenta --- */
+.login-box input:focus {
+    outline: none; 
+    /* Borde que se ilumina en color neón magenta */
+    border-color: var(--neon-magenta);
+    
+    /* Sombra de caja más brillante (exterior e interior) */
+    box-shadow: 
+        0 0 15px rgba(255, 0, 255, 0.7), /* Resplandor exterior magenta */
+        inset 0 0 8px rgba(255, 0, 255, 0.4); /* Resplandor interior magenta */
+    
+    /* Pequeña transformación para un efecto de 'activación' */
+    transform: scale(1.005); 
+}
+/* ------------------------------------------------ */
+
+.login-btn {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    /* Estilo neón magenta para el botón de acceso */
+    background-color: var(--neon-magenta);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Mensajes de Estado */
+.login-message {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.error-message {
+    color: #FF0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    border: 1px solid #FF0000;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.success-message {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 5px var(--neon-cyan);
+    border: 1px solid var(--neon-cyan);
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+.redirect-link {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--neon-cyan);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.redirect-link:hover {
+    color: var(--neon-magenta);
+    text-shadow: 0 0 5px var(--neon-magenta);
+}
+
+/* --- RESPONSIVE / MOBILE --- */
+@media (max-width: 500px) {
+    .login-box {
+        padding: 30px 20px;
+    }
+
+    .login-box h1 {
+        font-size: 1.5rem;
+    }
+}

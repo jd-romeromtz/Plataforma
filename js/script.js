@@ -64,7 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
                 nav.classList.remove('active');
+                alert('Navegando a ' + link.textContent);
             }
         });
     });
 });
+

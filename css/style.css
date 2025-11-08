@@ -300,3 +300,164 @@ footer {
     resize: none; /* No permitir redimensionar por el usuario (mejor UX) */
     height: 150px; /* Altura fija para mantener el diseño */
 }
+
+/* --- Estilos para el Modal Futurista --- */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Fondo muy oscuro y opaco */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.modal-content {
+    background-color: var(--bg-dark);
+    border: 2px solid var(--neon-cyan);
+    padding: 30px;
+    width: 90%;
+    max-width: 650px;
+    border-radius: 10px;
+    position: relative;
+    color: var(--text-light);
+    text-align: left;
+    
+    /* Sombra exterior intensa para el efecto de "holograma activo" */
+    box-shadow: 
+        0 0 50px rgba(0, 255, 255, 0.6), /* Resplandor principal cian */
+        inset 0 0 20px rgba(0, 255, 255, 0.3); /* Resplandor interno */
+    
+    /* Animación sutil de parpadeo (flicker) para simular inestabilidad */
+    animation: scanline-flicker 0.1s infinite alternate; 
+}
+
+@keyframes scanline-flicker {
+    0% { transform: scale(1.0); }
+    100% { transform: scale(1.002); }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    /* Estilo neón rojo/magenta para el botón de cierre */
+    color: var(--neon-magenta);
+    text-shadow: 0 0 10px var(--neon-magenta);
+    transition: all 0.3s;
+}
+
+.modal-close-btn:hover {
+    color: #FF3366; /* Rojo más intenso al pasar el mouse */
+    transform: rotate(15deg);
+}
+
+.modal-details {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.modal-details p {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.modal-details h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--neon-cyan);
+    padding-bottom: 5px;
+}
+
+.modal-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.modal-details ul li {
+    background-color: rgba(26, 26, 58, 0.5); /* Fondo para cada módulo */
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-left: 4px solid var(--neon-magenta);
+    font-size: 0.95rem;
+}
+
+/* --- Estilos de SweetAlert2 Futurista/Neón --- */
+
+/* Contenedor principal del modal */
+.swal2-popup {
+    background-color: var(--bg-dark) !important;
+    border: 2px solid var(--neon-magenta);
+    border-radius: 10px;
+    /* Sombra de caja neón magenta para que resalte */
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.6) !important;
+    font-family: 'Space Mono', monospace !important;
+}
+
+/* Título */
+.swal2-title {
+    color: var(--neon-cyan) !important;
+    text-shadow: 0 0 8px var(--neon-cyan) !important;
+    font-size: 1.8rem !important;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+    padding-bottom: 10px;
+}
+
+/* Contenido del texto/mensaje */
+.swal2-html-container {
+    color: var(--text-light) !important;
+    font-size: 1.1rem !important;
+    margin: 20px 0 !important;
+}
+
+/* Botones */
+.swal2-actions {
+    margin-top: 25px !important;
+}
+
+/* Botón de Confirmación (Inscribirse - Magenta) */
+.swal2-confirm {
+    background-color: var(--neon-magenta) !important;
+    color: var(--bg-dark) !important;
+    border: none !important;
+    box-shadow: 0 0 10px var(--neon-magenta) !important;
+    transition: all 0.2s;
+}
+
+.swal2-confirm:focus {
+    box-shadow: 0 0 15px var(--neon-magenta), 0 0 2px var(--neon-magenta) !important;
+}
+
+/* Botón de Cancelar (Cerrar - Cian) */
+.swal2-cancel {
+    background-color: transparent !important;
+    color: var(--neon-cyan) !important;
+    border: 1px solid var(--neon-cyan) !important;
+    box-shadow: inset 0 0 5px var(--neon-cyan) !important;
+    margin-left: 15px !important;
+}
+
+.swal2-cancel:focus {
+     box-shadow: inset 0 0 8px var(--neon-cyan), 0 0 2px var(--neon-cyan) !important;
+}
+
+/* Icono (Si lo usas, por ejemplo, 'info' o 'success') */
+.swal2-icon {
+    border-color: var(--neon-cyan) !important;
+    color: var(--neon-cyan) !important;
+}
