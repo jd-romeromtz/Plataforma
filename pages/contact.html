@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | ACADEMIA Código Neón</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo neon-text">
+            <span class="neon-color-cyan">CODE</span><span class="neon-color-magenta">STREAM</span>
+        </div>
+        <nav id="main-nav">
+            <a href="index.html#hero">Inicio</a> 
+            <a href="index.html#courses">Cursos</a>
+            <a href="#contact" class="active-link">Contacto</a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </nav>
+    </header>
+
+    <section id="contact" class="contact-section">
+        <h1 class="neon-text title-glow">CONÉCTATE CON EL SISTEMA</h1>
+        <p class="subtitle">Envíanos tus preguntas, sugerencias o consultas sobre los cursos. Te responderemos en el siguiente ciclo.</p>
+
+        <form id="contact-form" class="futuristic-form">
+            
+            <div class="form-group">
+                <label for="name" class="neon-label neon-color-cyan">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="neon-label neon-color-cyan">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="usuario@dominio.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="subject" class="neon-label neon-color-cyan">Asunto:</label>
+                <input type="text" id="subject" name="subject" required placeholder="Consulta sobre un curso / Sugerencia">
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="neon-label neon-color-cyan">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <button type="submit" class="neon-button primary-glow form-submit-btn">ENVIAR DATOS</button>
+            <p id="form-message" class="hidden"></p>
+        </form>
+
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 CODESTREAM Academy. Todos los derechos reservados.</p>
+            <p class="developer-info">Sitio web desarrollado por Ing. Jairo David Romero Martínez.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
