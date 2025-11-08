@@ -1,0 +1,243 @@
+/* VARIABLES DE COLOR */
+:root {
+    --bg-dark: #0A0A1F;
+    --neon-cyan: #00FFFF;
+    --neon-magenta: #FF00FF;
+    --text-light: #E0E0E0;
+    --text-muted: #8888AA;
+}
+
+/* ESTILOS GLOBALES Y TIPOGRAFÍA */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Mono', monospace; /* Fuente tecnológica */
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* EFECTO NEÓN Y SOMBRAS LUMINOSAS */
+.neon-text {
+    font-weight: 700;
+}
+
+.neon-color-cyan { color: var(--neon-cyan); }
+.neon-color-magenta { color: var(--neon-magenta); }
+
+.title-glow {
+    text-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan), 0 0 15px var(--neon-cyan);
+}
+
+.primary-glow {
+    box-shadow: 0 0 7px var(--neon-magenta), 0 0 12px var(--neon-magenta);
+}
+
+/* 1. HEADER Y NAVEGACIÓN (UX/UI Sencillo) */
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--neon-magenta);
+}
+
+.logo {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+nav a {
+    margin-left: 20px;
+    font-size: 1rem;
+    padding: 5px;
+}
+nav a:hover {
+    color: var(--neon-magenta);
+    text-shadow: 0 0 3px var(--neon-magenta);
+}
+
+.menu-toggle {
+    display: none; /* Oculto por defecto en desktop */
+    background: none;
+    border: none;
+    color: var(--neon-cyan);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* 2. SECCIÓN HERO */
+.hero-section {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 5%;
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+}
+
+.neon-button {
+    background-color: var(--neon-magenta);
+    color: var(--bg-dark);
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.neon-button:hover {
+    background-color: #FF66FF;
+    transform: scale(1.05);
+}
+
+/* 3. SECCIÓN DE CURSOS */
+.courses-section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.courses-section h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background-color: rgba(10, 10, 31, 0.7); /* Fondo semi-transparente */
+    border: 1px solid var(--neon-cyan);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Sombra interna y externa para el efecto de caja luminosa */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4), inset 0 0 5px rgba(0, 255, 255, 0.6);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--neon-magenta), inset 0 0 8px var(--neon-magenta);
+    border-color: var(--neon-magenta);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--neon-magenta);
+    text-shadow: 0 0 3px var(--neon-magenta);
+    margin-bottom: 10px;
+}
+
+.card-tech {
+    display: inline-block;
+    background-color: var(--neon-cyan);
+    color: var(--bg-dark);
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card-actions a {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.enroll-btn {
+    background-color: var(--neon-magenta);
+    color: var(--bg-dark);
+}
+
+.details-btn {
+    background-color: transparent;
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+}
+.details-btn:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+/* 4. FOOTER */
+footer {
+    background: #000000;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--neon-cyan);
+}
+
+.developer-info {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: var(--neon-magenta);
+}
+
+/* 5. RESPONSIVE DESIGN (Para móviles) */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    /* Ocultar menú en móvil y mostrar el toggle */
+    nav a {
+        display: none;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Mostrar menú al hacer clic en el toggle */
+    nav.active a {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    nav.active {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(10, 10, 31, 0.95);
+        padding: 10px 0;
+        border-top: 1px solid var(--neon-magenta);
+    }
+}
