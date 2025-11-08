@@ -241,3 +241,62 @@ footer {
         border-top: 1px solid var(--neon-magenta);
     }
 }
+/* 6. FORMULARIO DE CONTACTO */
+/* Variables del proyecto para consistencia */
+:root {
+    --bg-dark: #0A0A1F;
+    --neon-cyan: #00FFFF;
+    --neon-magenta: #FF00FF;
+    --text-light: #E0E0E0;
+    --text-muted: #8888AA;
+    --input-bg: #1A1A3A; /* Un color ligeramente más claro que el fondo para que destaque */
+}
+
+/* Estilos de base aplicados a inputs y textareas */
+.futuristic-for input[type="text"],
+.futuristic-for input[type="email"],
+.futuristic-for textarea {
+    /* Base */
+    width: 100%;
+    padding: 14px 16px; /* Aumentamos el padding para un look más moderno */
+    background-color: var(--input-bg);
+    color: var(--neon-cyan); /* El texto de entrada es neón */
+    border: 1px solid var(--text-muted); /* Borde inicial discreto */
+    border-radius: 4px; 
+    font-size: 1rem;
+    font-family: 'Space Mono', monospace;
+    transition: all 0.4s ease; /* Transición suave para el efecto de enfoque */
+    
+    /* Sombra interna para simular una pantalla apagada */
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5); 
+}
+
+/* Placeholder (Texto de ayuda) */
+.futuristic-for input::placeholder,
+.futuristic-for textarea::placeholder {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Estado de ENFOQUE (Focus): ¡Aquí viene el efecto NEÓN! */
+.futuristic-for input:focus,
+.futuristic-for textarea:focus {
+    outline: none; /* Quitar el borde predeterminado del navegador */
+    
+    /* Borde que se ilumina en color neón magenta */
+    border-color: var(--neon-magenta);
+    
+    /* Sombra de caja más brillante (exterior e interior) */
+    box-shadow: 
+        0 0 15px rgba(255, 0, 255, 0.7), /* Resplandor exterior magenta */
+        inset 0 0 8px rgba(255, 0, 255, 0.4); /* Resplandor interior magenta */
+    
+    /* Pequeña transformación para un efecto de 'activación' */
+    transform: scale(1.005); 
+}
+
+/* Mejoras para el Textarea (para el mensaje) */
+.futuristic-for textarea {
+    resize: none; /* No permitir redimensionar por el usuario (mejor UX) */
+    height: 150px; /* Altura fija para mantener el diseño */
+}
